@@ -10,6 +10,8 @@ def fib(n):
             first = second - first
             counter += 1
         return second
+
+
 def main():
     n = int(input())
     print(fib(n))
