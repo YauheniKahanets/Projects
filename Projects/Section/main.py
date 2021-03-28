@@ -6,12 +6,18 @@
 m точек и сами m точек. Если таких множеств точек несколько, выведите любое из них."""
 
 n = int(input())
-segments = dict()
+section = list()
 for x in range(1, n + 1):
-    a, b = map(int, input().split())
-    s = ''
-    for i in range(a, b + 1):
-        s += str(i)
-        section = set(s)
-    segments[x]= sorted(section)
-print(segments)
+    left, right = map(int, input().split())
+    if not section:
+        section.append(left)
+        section.append(right)
+    else:
+        if section[0] <= left <= section[1]:
+            section[0] = left
+        if section[0] <= right <= section[1]:
+            section[1] = right
+if section[0] == section[1]:
+    section.pop()
+print(len(section))
+print(*section)
