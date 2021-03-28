@@ -13,9 +13,9 @@ for x in range(1, n + 1):
         section.append(left)
         section.append(right)
     else:
-        if section[0] <= left <= section[1]:
+        if section[0] <= left < section[1]:
             section[0] = left
-        if section[0] <= right <= section[1]:
+        if right > section[1]:
             section[1] = right
 if section[0] == section[1]:
     section.pop()
