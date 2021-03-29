@@ -7,17 +7,17 @@ m точек и сами m точек. Если таких множеств то
 
 n = int(input())
 section = list()
-for x in range(1, n + 1):
+for _ in range(1, n + 1):
     left, right = map(int, input().split())
     if not section:
         section.append(left)
         section.append(right)
     else:
-        if section[0] <= left < section[1]:
+        if left > section[0]:
             section[0] = left
-        if right > section[1]:
+        if right < section[1]:
             section[1] = right
-if section[0] == section[1]:
+if section[1] == section[0]:
     section.pop()
 print(len(section))
-print(*section)
+print(*(sorted(section)))
