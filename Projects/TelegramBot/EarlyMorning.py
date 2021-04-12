@@ -26,12 +26,12 @@ def output_message(message):
                 f"http://api.openweathermap.org/data/2.5/find?q=Svyetlahorsk&type=like&APPID={weather_token}",
                 params={'units': 'metric', 'lang': 'ru'})
             data = res.json()
-            weather_message= f"{data['list'][0]['weather'][0]['description'].capitalize()} " \
-                             f"\nТемпература: {data['list'][0]['main']['temp']}° " \
-                             f"\nОщущается как: {data['list'][0]['main']['feels_like']}° " \
-                             f"\nВлажность: {data['list'][0]['main']['humidity']}%" \
-                             f"\nСкорость ветра: {data['list'][0]['wind']['speed']}м/с" \
-                             f"\nОблачность: {data['list'][0]['clouds']['all']}% "
+            weather_message = f"{data['list'][0]['weather'][0]['description'].capitalize()} " \
+                              f"\nТемпература: {data['list'][0]['main']['temp']}° " \
+                              f"\nОщущается как: {data['list'][0]['main']['feels_like']}° " \
+                              f"\nВлажность: {data['list'][0]['main']['humidity']}%" \
+                              f"\nСкорость ветра: {data['list'][0]['wind']['speed']}м/с" \
+                              f"\nОблачность: {data['list'][0]['clouds']['all']}% "
             bot.send_message(message.chat.id, weather_message)
             if data['list'][0]['rain'] != 'null':
                 bot.send_message(message.chat.id, data['list'][0]['rain'])
