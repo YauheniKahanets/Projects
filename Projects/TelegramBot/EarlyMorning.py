@@ -43,9 +43,9 @@ def output_message(message):
 
         currency = cg.get_price(ids='bittorrent-2,cardano,tron', vs_currencies='usd', include_24hr_change='true')
         currency_message = \
-            f"BTT: {currency['bittorrent-2']['usd']} $  || {round(currency['bittorrent-2']['usd_24h_change'], 3)} %" \
-            f"\nCardano: {currency['cardano']['usd']} $  || {round(currency['cardano']['usd_24h_change'], 3)} %" \
-            f"\nTron: {currency['tron']['usd']} $  || {round(currency['tron']['usd_24h_change'], 3)} %"
+            f"BTT: {currency['bittorrent-2']['usd']} $ || {round(currency['bittorrent-2']['usd_24h_change'], 3)} %" \
+            f"\nCardano: {currency['cardano']['usd']} $ || {round(currency['cardano']['usd_24h_change'], 3)} %" \
+            f"\nTron: {currency['tron']['usd']} $ || {round(currency['tron']['usd_24h_change'], 3)} %"
         bot.send_message(message.chat.id, currency_message)
     else:
         bot.send_message(message.chat.id, "Sorry! I can't do this.")
