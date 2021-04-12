@@ -1,10 +1,11 @@
 import telebot
 import requests
 
-with open('.git/token.txt', 'r') as file:
-    for line in file:
-        token = line.strip()
-bot = telebot.TeleBot(token)
+with open('.git/token', 'r') as file:
+    tokens = list(file)
+bot_token = tokens[0].strip()
+weather_token = tokens[1].strip()
+bot = telebot.TeleBot(bot_token)
 keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True).add('Погода', 'Курсы криптовалют')
 
 
@@ -20,8 +21,7 @@ def weather_message(message):
     if message.text == 'Погода':
         try:
             res = requests.get(
-                "http://api.openweathermap.org/data/2.5/find?q=Svyetlahorsk&type=like&APPID"
-                "=34d0b12aa3eeabf3a7882862ce916b59",
+                f"http://api.openweathermap.org/data/2.5/find?q=Svyetlahorsk&type=like&APPID={weather_token}",
                 params={'units': 'metric', 'lang': 'ru'})
             data = res.json()
             weather = str("Сейчас " + str(data['list'][0]['weather'][0]['description']) +
