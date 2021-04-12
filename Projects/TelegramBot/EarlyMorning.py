@@ -40,7 +40,6 @@ def output_message(message):
         except Exception:
             pass
     elif message.text == 'Курсы криптовалют':
-
         currency = cg.get_price(ids='bittorrent-2,cardano,tron', vs_currencies='usd', include_24hr_change='true')
         currency_message = \
             f"BTT: {currency['bittorrent-2']['usd']} $  || {round(currency['bittorrent-2']['usd_24h_change'], 3)} %" \
