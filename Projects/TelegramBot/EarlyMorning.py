@@ -27,15 +27,20 @@ def weather_message(message):
             weather = str("Сейчас " + str(data['list'][0]['weather'][0]['description']) +
                           "\nТемпература: " + str(data['list'][0]['main']['temp']) + "°\nОщущается как " +
                           str(data['list'][0]['main']['feels_like']) + "°" +
-                          "\nВлажность: " + str(data['list'][0]['main']['humidity']) + "%"
-                                                                                       "\nСкорость ветра: " + str(
-                data['list'][0]['wind']['speed']) + "м/с")
+                          "\nВлажность: " + str(data['list'][0]['main']['humidity']) + "%\nСкорость ветра: " +
+                          str(data['list'][0]['wind']['speed']) + "м/с\nОблачность: " +
+                          str(data['list'][0]['clouds']['all']) + "%")
             bot.send_message(message.chat.id, weather)
+            if data['list'][0]['rain'] != 'null':
+                bot.send_message(message.chat.id, data['list'][0]['rain'])
+            if data['list'][0]['snow'] != 'null':
+                bot.send_message(message.chat.id, data['list'][0]['snow'])
         except Exception as e:
-            print("Exception (weather):", e)
             pass
     elif message.text == 'Курсы криптовалют':
         bot.send_message(message.chat.id, "Sorry! This feature is coming soon...")
     else:
         bot.send_message(message.chat.id, "Sorry! I can't do this.")
+
+
 bot.polling(none_stop=True, interval=0)
