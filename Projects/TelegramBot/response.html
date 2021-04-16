@@ -1,0 +1,964 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+		
+		
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<title>Сегодня в продаже</title>
+
+		
+		<link rel="stylesheet" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/style.css?2">
+	
+	
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/img/apple-touch-icon-114.png"/>
+	<link rel="apple-touch-icon" sizes="114x114" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/img/apple-touch-icon-114.png"/>
+	<link rel="apple-touch-icon" sizes="72x72" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/img/apple-touch-icon-144.png"/>
+	<link rel="apple-touch-icon" sizes="144x144" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/img/apple-touch-icon-144.png"/>
+		
+	<link href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+	<!--[if IE]><link href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/style-ie.css" rel="stylesheet" type="text/css"  media="all"></link><![endif]-->
+	<!--[if IE]><script type="text/javascript" src="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/js/excanvas.js"></script><![endif]-->
+	<style>
+	@font-face {
+	    font-family: 'PTMagistralRegular';
+	    src: url('/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/magistralwebfont.woff') format('woff'),
+	         url('/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/magistralwebfont.ttf') format('truetype'),
+	         url('/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/magistralwebfont.svg') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	
+	}
+	@font-face {
+	    font-family: 'MagistralCBold';
+	    src: url('/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/magistralc-boldwebfont.woff') format('woff'),
+	         url('/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/magistralc-boldwebfont.ttf') format('truetype'),
+	         url('/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/magistralc-boldwebfont.svg') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	</style>
+
+	
+	
+
+<script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/jquery.min-1.5.js"></script>
+<script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/ie.js"></script>
+	    
+    <link rel="stylesheet" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/printCss/960.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/printCss/screen.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/printCss/print.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/printCss/print-preview.css" type="text/css" media="screen" />
+    <script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/jquery.tools.min.js"></script>
+    <script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/jquery.print-preview.js"></script>
+	<style>
+		#print-modal-controls a.close {
+    			background: url("/sitebeloil/system/modules/by.iba.beloil.templates/resources/printCss/imagesPrint/images2/icon-close.png") no-repeat scroll 50% 50% transparent !important;
+		}
+		#print-modal-controls a.print {
+   			background: url("/sitebeloil/system/modules/by.iba.beloil.templates/resources/printCss/imagesPrint/images2/icon-print.png") no-repeat scroll 50% 50% transparent;
+		}
+		a.print-preview {
+   		
+		}
+	</style> 
+	
+
+	
+		
+<!-- NT -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQDBDNR');</script>
+<!-- End NT -->
+<script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/jquery.jNice.js"></script>
+	
+	<script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/jquery.cookie.js"></script>
+        <script>
+	  $(document).ready(function(){
+	  		$(".topicSelect").each(function(){
+				var element = this;
+				if(element.nodeName=="SELECT"){
+					$(element).change(function() {
+    						var selectedTopic;
+    						$(".topicSelect").each(function(){
+                  				 if(this.nodeName=="SELECT"){ 
+                     				  	$(this).find("option").each(function(){
+                     				  		if($(this).attr("selected")){
+                            			 	 		selectedTopic = $(this).text();
+                            			 	 	}                            			 	 	
+                      					 });              
+                					}
+            					});
+   						 $(".topicInput").each(function(){        
+        						var elementInput = this;
+      							  if(elementInput.nodeName=="INPUT"){        						  
+         							  $(elementInput).val(selectedTopic);
+      						 	 }
+					   	 });
+					});
+			$(this).find("option").each(function(){
+				if($(this).text() == $.cookie("beloil_page_title")){
+					$(this).attr("selected", "selected");
+				};
+			});
+		}
+		}); 				
+		$.cookie("beloil_page_title", "Сегодня в продаже", {path: '/'});	
+	  });	  	
+	</script>
+</head>
+
+<body class="inner ru" onload="checkIE()">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44889158-1', 'belorusneft.by');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- NT (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQDBDNR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End NT (noscript) -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(75250123, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/75250123" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+ 
+	<div class="l-page">
+	
+		<div class="h-page">
+				
+			
+
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+    
+ 
+        
+<!--<script>
+	$(document).ready(function(){
+		$(".text").css("display","none");
+		$(".b-header_search_main").mouseover(function() {
+			$(".text").css("display","block");
+		}).mouseout(function() {
+    			$(".text").css("display","none");
+		}) 	
+});
+</script>        -->
+
+        
+<div class="b-header">
+			
+				<div class="b-logo">
+					<div id="headerlogocontainer" >
+
+	
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style = "position: absolute; z-index: 1;">
+	<a href="/sitebeloil/ru/" >
+		<img src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/i/b-logo.png"/ style="margin-top:5px;margin-bottom:5px;float:left;"/>
+	</a>
+	
+		
+	        	<img src="/sitebeloil/.content/banners/znak-55-let.png" style="width: 120px;" />
+	    	    
+	    	
+	
+	<div class = "medal">
+		<a href="/sitebeloil/ru/center/azs/addUp/about/choice/" >
+			<img src="/sitebeloil/.content/banners/choice_logo.jpg"/ />
+		</a>
+		<a href="/sitebeloil/ru/center/azs/addUp/about/set-zs-1/" >
+			<img src="/sitebeloil/.content/banners/NM-2016.jpg"/ />
+		</a>
+		<a href="/sitebeloil/ru/center/azs/addUp/about/brand/" >
+			<img src="/sitebeloil/.content/banners/gold-by.jpg"/ />
+		</a>
+	</div>
+</div>
+		
+		
+	
+
+</div>
+					<!--<a href=" /sitebeloil/index.html"><img src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/i/b-logo.png" alt="" /></a>-->
+				</div><!--b-logo-->
+				
+				
+					<div class="b-header_info_main" style = "padding-top: 45px;">
+						<div class = "visually_impaired" style = "min-width: 285px; margin-bottom: 5px; text-align: center;">
+								<a class = "visually_impaired_span" href="https://v.belorusneft.by/sitebeloil/ru/center/azs/center/fuelandService/price/index.html">
+				Версия для слабовидящих
+								</a>
+							</div>
+				
+				
+				
+					<div class="b-header_search_main">
+						<div id="headercontainer" >
+
+	
+	
+		
+			
+<div>
+
+
+
+	
+	
+		
+		
+			
+			<div class="boxbody">
+			<form id="searchFormSide" name="searchForm" action="/sitebeloil/ru/addUp/searchResults/" method="post">
+				<input type="hidden" name="searchaction" value="search" />
+				<input type="hidden" name="searchPage" value="1" />
+				<div class="text">
+					<input type="text" name="parsedQuery" value="" />
+				</div>
+				<!--<input type="submit" name="submit" value="" class="submit"/>		изменено 07-10-2016-->	
+				<input type="submit" name="submit" value="" class="submit_search"/>
+			</form>
+			</div>
+		
+	
+
+
+</div>
+		
+		
+	
+
+</div>						
+					</div><!--b-header_search-->
+					
+					
+					<div class="b-header_links_main">
+						<a class = "visually_impaired_span" href="/sitebeloil/ru/center/azs/addUp/contacts/"><img alt="" src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/i/cover.png"/></a>			
+						    
+							<a style="text-align: center;" href="/sitebeloil/en/center/azs/center/fuel/price/index.html">Eng</a>
+							  
+						
+					</div><!--b-header_links-->
+					
+					
+						<ul class = "main_ul">
+							<li class = "main_submenu">
+								<span>Личный кабинет</span>
+								<ul class = "sub_ul">
+									<li class = "sub_submenu">
+										<a href= "https://bonus.belorusneft.by/">Автомобилистам</a>
+									</li>
+									<li class = "sub_submenu">
+										<a href= "https://azs.belorusneft.by/rcp/web/login">Бизнес-клиентам</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					
+					
+					
+				</div><!--b-header_info-->
+			</div><!--b-header-->
+  			
+			
+			<div class="b-menu">
+			
+			<div class="netazs">
+				    
+							<a href="/sitebeloil/ru/center/azs/index.html">
+							
+				
+				Сеть АЗС</a></div>
+			
+				<span class="logo"><a href = "/sitebeloil/ru/center/azs/addUp/contacts/">Служба поддержки клиентов:  <img alt="" src="/sitebeloil/.content/images/banners/AZS/mts.png" title="+375 (33)"/> <img alt="" src="/sitebeloil/.content/images/banners/AZS/life.png" title="+375 (25)" style="margin-bottom: -4px;"/> <img alt="" src="/sitebeloil/.content/images/banners/AZS/a1.png" title="+375 (29)"/> 6-431-431</a></span>
+
+			</div><!--b-menu-->	
+			
+			<div class="b-main_slider">
+				<div class="b-main_slider__menu">
+					
+
+
+
+
+
+
+
+
+
+
+		<ul> 
+		 
+		
+						
+						
+		</ul>
+	
+</div><!--b-main_slider__img-->
+<!--<ul class="dropdown"> commented on 04.05.2013 due to new design-->
+                    
+ <div class="b-main_slider__menu b-main_slider__menu5">
+<ul >
+  <li  id="1"  class=""><a href="/sitebeloil/ru/center/azs/center/search/">Карта АЗС</a><div class="tl"></div><div class="tr"></div><div class="br"></div><div class="bl"></div></li>
+  <li  id="2"  class=" subm "><a href="/sitebeloil/ru/center/azs/center/automobil/">Автомобилистам</a><div class="tl"></div><div class="tr"></div><div class="br"></div><div class="bl"></div>
+   <ul>
+    <li  class=""><span class="ie_t"></span><a href="/sitebeloil/ru/center/azs/center/automobil/fill_efeckt/">Программа лояльности</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/automobil/mobile_service/">Мобильный сервис оплаты топлива на АЗС</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/automobil/toll_fiz/">Оплата дорог</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/automobil/Service/">Сервис на АЗС</a></li>
+    <li  class=" last  ie_b_p "><span class="ie_b"></span><a href="/sitebeloil/ru/center/azs/center/automobil/catalog/">Интернет-витрина</a></li>
+   </ul>
+  </li>
+  <li  id="3"  class=" subm "><a href="/sitebeloil/ru/center/azs/center/biznes/">Бизнес-клиентам</a><div class="tl"></div><div class="tr"></div><div class="br"></div><div class="bl"></div>
+   <ul>
+    <li  class=""><span class="ie_t"></span><a href="/sitebeloil/ru/center/azs/center/biznes/cabinet-biznes.html">Личный кабинет</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/biznes/fuel_card/">Топливная карта</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/biznes/road_toll_russia/">Оплата дорог в России</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/biznes/road_toll_belarus/">Оплата дорог в Беларуси</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/biznes/electronic_invoices/">Электронные счета-фактуры НДС</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/biznes/customer-acknowledgments/">Благодарности клиентов</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/biznes/fuel-card-issuance/">Выпуск в обращение и обслуживание топливных карт</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/biznes/testirovanie-sku/">Поставщикам товаров на АЗС</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/biznes/processing/">Сетям АЗС и процессинговым центрам</a></li>
+    <li  class=" last  ie_b_p "><span class="ie_b"></span><a href="/sitebeloil/ru/center/azs/center/biznes/near_road/">Развитие придорожного сервиса</a></li>
+   </ul>
+  </li>
+  <li  id="4"  class=" cur_azs "><a href="/sitebeloil/ru/center/azs/center/fuelandService/">Топливо</a><div class="tl"></div><div class="tr"></div><div class="br"></div><div class="bl"></div></li>
+  <li  id="5"  class=" last  subm "><a href="/sitebeloil/ru/center/azs/center/offers/">Акции и предложения</a><div class="tl"></div><div class="tr"></div><div class="br"></div><div class="bl"></div>
+   <ul>
+    <li  class=""><span class="ie_t_last"></span><a href="/sitebeloil/ru/center/azs/center/offers/cikavyya-bonusy/">Цiкавыя бонусы!</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/offers/contest-my-fueling/">Конкурс #Моя_заправка</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/offers/goodyear/">Скидка до 65 % на коллекцию товаров GOODYEAR</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/offers/big-bonuses/">Мега бонусы</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/offers/fillCostEfficently/">Программа поощрения «ЗАПРАВКА»</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/offers/bn_bns/">Скидки от Белнефтестраха</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/offers/za-skidkoj-v-duty-free/">За скидкой в Duty Free</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/offers/certificate/">Подарочные сертификаты</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/offers/installment-plan/">Рассрочка на АЗС</a></li>
+    <li  class=""><a href="/sitebeloil/ru/center/azs/center/offers/regionalnye-akcii/">Региональные акции</a></li>
+    <li  class=" last  ie_b_p "><span class="ie_b"></span><a href="/sitebeloil/ru/center/azs/center/offers/arhiv-predlozhenij/">Архив акций</a></li>
+   </ul>
+  </li>
+
+
+</ul>            
+				</div><!--b-main_slider__menu-->
+			</div><!--b-main_slider-->
+				
+			<div class="b-inner_content">
+						
+				<div class="b-left">
+				
+					<div class="b-left__menu">
+						
+
+
+
+<div id="sideMenu">
+	<ul>
+	
+		
+			
+			
+				
+				
+				
+				
+				
+			
+	
+
+			
+				<li> 
+			 		
+			       
+			           <span> Сегодня в продаже </span>
+			      			
+			
+		
+			
+			
+				
+				
+				</li>
+				
+				
+			
+	
+
+			
+				<li> 
+			 	
+			 		
+			 		 
+			 		  <a href="/sitebeloil/ru/center/azs/center/fuelandService/quality/"> Качество </a>	
+			 		 
+			          
+				 	
+			       			
+			
+		
+			
+			
+				
+				
+				</li>
+				
+				
+			
+	
+
+			
+				<li> 
+			 	
+			 		
+			 		 
+			 		  <a href="/sitebeloil/ru/center/azs/center/fuelandService/brendovoe-toplivo/"> Брендовое топливо </a>	
+			 		 
+			          
+				 	
+			       			
+			
+		
+			
+			
+				
+				
+				</li>
+				
+				
+			
+	
+
+			
+				<li> 
+			 	
+			 		
+			 		 
+			 		  <a href="/sitebeloil/ru/center/azs/center/fuelandService/autogas/"> Автогаз ПБА </a>	
+			 		 
+			          
+				 	
+			       			
+			
+		
+			
+			
+				
+				
+				</li>
+				
+				
+			
+	
+
+			
+				<li> 
+			 	
+			 		
+			 		 
+			 		  <a href="/sitebeloil/ru/center/azs/center/fuelandService/payment/"> Способы оплаты </a>	
+			 		 
+			          
+				 	
+			       			
+			
+		
+		
+		
+		</li>
+	</ul>
+</div>
+					</div><!--b-left__menu-->
+				
+					<div id="leftcontainer" >
+
+	
+	
+		
+			
+
+
+
+
+
+
+
+
+			
+			
+			
+<div>
+<div class="b-left__informer">
+	<div class="b-left__informer_top">
+		<a href="/sitebeloil/ru/center/azs/center/fuelandService/price/">Цены на топливо (BYN)</a>
+	</div><!--b-left__informer_top-->
+	<table>
+<tr><th class="col2" title = "">АИ-92</th><th class="col2" title = "">АИ-95,<a href="/sitebeloil/ru/center/azs/center/fuelandService/brendovoe-toplivo-BN/"><img alt="" src="/sitebeloil/.content/download/azsPic/logo-bn-95.png" style="height: 16px; vertical-align: middle; padding-bottom: 2px;"/><img src="/sitebeloil/.content/download/azsPic/flagman_white.png" style="width: 20px; vertical-align: middle; margin-left: 2%;"></a></th></tr><tr><td class="col2">1.80</td><td class="col2">1.90</td></tr><tr><th class="col2" title = "">АИ-98</th><th class="col2" title = "Цена на каждой конкретной АЗС может отличаться в зависимости от спроса и предложения">Газ ПБА</th></tr><tr><td class="col2">2.04</td><td class="col2">0.99</td></tr><tr><th colspan="2" class="col2">ДТ</th></tr><tr><td colspan="2" class="col2">1.90</td></tr>
+	</table>
+	
+</div>
+
+</div>
+
+<!--b-left__informer-->
+		
+		
+	
+
+</div>
+
+					
+
+				</div><!--b-left-->
+					
+				<div class="b-right">
+					<!-- begin: breadcrumb -->
+					
+					<div id="crumbs" class="crumbs">
+						
+
+
+
+
+
+	
+	
+	
+		
+		<a href="/sitebeloil/ru/center/azs/center/fuelandService/">
+		Топливо
+
+		</a>
+		
+	
+
+	
+	
+	
+		&nbsp;»&nbsp;
+		<a href="/sitebeloil/ru/center/azs/center/fuelandService/price/">
+		Сегодня в продаже
+
+		</a>
+		
+	
+
+        
+	
+	
+		
+	
+						   
+					</div>
+					
+					<!-- end: breadcrumb -->
+					
+					
+					<div id="content">
+					
+
+
+
+
+
+ 
+  
+  
+
+<link rel="stylesheet" type="text/css" href="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/css/jscal2.css" />
+<link rel="stylesheet" type="text/css" href="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/css/border-radius.css" />
+<link rel="stylesheet" type="text/css" href="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/css/steel.css" />
+
+
+		<link rel="stylesheet" type="text/css" href="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/css/style.css" />
+
+
+<script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/jquery-1.8.2.js"></script>
+<script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/jquery.ui.core.js"></script>
+<script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/jquery.ui.widget.js"></script>
+<script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/jquery.ui.datepicker.js"></script>
+<script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/i18n/jquery.ui.datepicker-ru.js"></script>
+<link rel="stylesheet" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/jquery.ui.datepicker.css"/>
+<link rel="stylesheet" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/jquery.ui.core.css"/>
+<link rel="stylesheet" href="/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/jquery.ui.theme.css"/>
+
+
+<script src="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/js/jquery.jqplot.js"></script> 
+<script src="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/js/shCore.min.js"></script> 		
+<script src="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/js/shBrushJScript.min.js"></script> 		
+<script src="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/js/shBrushXml.min.js"></script> 				
+<script src="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/js/jqplot.highlighter.min.js"></script> 		
+<script src="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/js/jqplot.dateaxisRenderer.min.js"></script> 		
+<script src="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/js/jqplot.canvasTextRenderer.min.js"></script> 
+<script src="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/js/jqplot.canvasaxisLabelRenderer.min.js"></script> 		
+
+<link rel="stylesheet" href="/sitebeloil/system/modules/by.iba.beloil.fuel.price/resources/css/jquery.jqplot.min.css"/>
+  
+   	  			
+<script> 
+
+
+
+
+
+
+	var dateBgn = 'null'
+	var dateEnd = 'null'
+	var currentDate = new Date()
+ 	var day = currentDate.getDate()
+  	var month = currentDate.getMonth() + 1
+  	var year = currentDate.getFullYear()
+	var dateString =year + "-" + month + "-" + day;
+	
+	$(document).ready(function(){
+		
+	
+	
+	
+	 	if(dateBgn != "null"){
+	 		 $("#f_date1").val(dateBgn);
+	 		 $("#stDate").val(dateBgn);
+	 		 
+	 	}else{
+ 			$("#f_date1").val('13.04.2020'); 	
+ 			$("#stDate").val($("#f_date1").val());		
+	 	 }
+	 	 if(dateEnd != "null"){
+	 		 $("#f_date2").val(dateEnd);
+	 	}else{
+	 	 	$("#f_date2").val('13.04.2021');
+	 	 }
+		$("#my_select").find("option").each(function(){	
+			if($(this).val() == "null"){
+    				$(this).attr("selected", "selected");
+			};
+		});		
+		$( "#f_date1" ).datepicker({      	  
+      	  		showOn: "button",
+            		buttonImage: "/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/images/bo_cal_ico.png",
+            		buttonImageOnly: true,
+            		maxDate: '11.04.2021'
+            		
+            		
+      	  	});	
+		$( "#f_date1" ).datepicker( $.datepicker.regional[ "ru" ] ); 
+
+		$( "#f_date2" ).datepicker({      	  
+			showOn: "button",
+			buttonImage: "/sitebeloil/system/modules/by.iba.beloil.templates/resources/css/images/bo_cal_ico.png",
+			buttonImageOnly: true,
+			maxDate: '13.04.2021'			
+	      	  });
+		$( "#f_date2" ).datepicker( $.datepicker.regional[ "ru" ] ); 	 
+	}); 
+	
+	function validate_form()
+ 	{
+	valid = true;
+		if ( document.getElementById('f_date1').value == "" )
+	        	{
+	                	alert ( "Пожалуйста, заполните поле 'Начало периода'." );
+	                	valid = false;
+	        	}
+			if ( document.getElementById('f_date2').value == "" )
+	        	{
+	                	alert ( "Пожалуйста, заполните поле 'Конец периода'." );
+	                	valid = false;
+	        	}
+	        	var days = ($.datepicker.parseDate('dd.mm.yy',$( "#f_date2" ).val()) - $.datepicker.parseDate('dd.mm.yy',$( "#f_date1" ).val()))/(1000*60*60*24);
+		
+			if(days<2 && days>=0){
+				alert('Между датой начала и конца диапазона должно быть минимум 3 дня');
+				valid = false;
+			}else if(days<0){
+				alert('Между датой начала должна быть меньше даты конца периода');
+					valid = false;
+			}
+		        return valid;
+	}
+	
+	
+</script> 
+	 
+    							
+<h2>Сегодня в продаже: </h2>
+<form name="input" id="input" method="post" action="#" onsubmit="return validate_form();">
+	<table>
+		<tr>
+			<td>Начало периода:</td>
+			<td>
+				<input size="30" name="date1" id="f_date1" />
+			</td>      
+  				
+		</tr>
+	   	<tr>
+			<td>Конец периода:</td>
+			<td>
+				<input size="30" name="date2" id="f_date2" />
+			</td>
+		</tr>
+		
+		<tr>
+			<td>Валюта:</td>
+ 			<td>
+ 				<select id="currency" name='currency'>
+ 					  <option value="byr"  selected 
+>Белорусский рубль</option>
+ 					  <option value="usd" >Доллар США</option>
+ 					  <option value="eur" >Евро</option>
+ 					  <option value="rub" >Российский рубль</option>
+ 				</select>
+ 			</td>
+ 		</tr>
+			
+		<tr>
+			<td>Топливо:</td>
+ 			<td>
+ 				
+				<input type="checkbox" name="fuelCheckbox" value="1366704419951" checked="checked" />АИ-95<input type="checkbox" name="fuelCheckbox" value="1366704860839" checked="checked" />АИ-92<input type="checkbox" name="fuelCheckbox" value="1366704869982" checked="checked" />ДТ<input type="checkbox" name="fuelCheckbox" value="1366704870002"/>Газ ПБА<input type="checkbox" name="fuelCheckbox" value="1366704870001"/>АИ-98
+ 				
+ 			</td>
+ 		</tr>
+ 		
+ 		
+		<tr>
+			<td style="height: 30px;">
+				<input style="height:25px;" type="submit" id="submit" name="submit" value="Обновить" onclick = "form.action='#'" />
+			
+				<!--<input style="height:25px;" type="submit" id="submitReport" name="submitReport" value="Экспорт в Excel" onclick = "form.action='/ExportServlet/ExportFuelExcelServlet';" /> -->
+			</td>
+			<td>
+				<input type="hidden" name="hidden" id="my_field" value="field"/>
+			</td>
+			
+		</tr>
+	</table>
+		
+</form>
+
+
+
+
+<script>
+
+$(document).ready(function(){	
+		var labels = ["АИ-95","АИ-92","ДТ"];
+		$.jqplot('chartdiv',[[[new Date(2020,3,13),1.82],[new Date(2020,3,14),1.82],[new Date(2020,3,15),1.82],[new Date(2020,3,16),1.82],[new Date(2020,3,17),1.82],[new Date(2020,3,18),1.82],[new Date(2020,3,19),1.81],[new Date(2020,3,20),1.81],[new Date(2020,3,21),1.81],[new Date(2020,3,22),1.81],[new Date(2020,3,23),1.81],[new Date(2020,3,24),1.81],[new Date(2020,3,25),1.81],[new Date(2020,3,26),1.8],[new Date(2020,3,27),1.8],[new Date(2020,3,28),1.8],[new Date(2020,3,29),1.8],[new Date(2020,3,30),1.8],[new Date(2020,4,1),1.8],[new Date(2020,4,2),1.8],[new Date(2020,4,3),1.79],[new Date(2020,4,4),1.79],[new Date(2020,4,5),1.79],[new Date(2020,4,6),1.79],[new Date(2020,4,7),1.79],[new Date(2020,4,8),1.79],[new Date(2020,4,9),1.79],[new Date(2020,4,10),1.78],[new Date(2020,4,11),1.78],[new Date(2020,4,12),1.78],[new Date(2020,4,13),1.78],[new Date(2020,4,14),1.78],[new Date(2020,4,15),1.78],[new Date(2020,4,16),1.78],[new Date(2020,4,17),1.78],[new Date(2020,4,18),1.78],[new Date(2020,4,19),1.78],[new Date(2020,4,20),1.78],[new Date(2020,4,21),1.78],[new Date(2020,4,22),1.78],[new Date(2020,4,23),1.78],[new Date(2020,4,24),1.78],[new Date(2020,4,25),1.78],[new Date(2020,4,26),1.78],[new Date(2020,4,27),1.78],[new Date(2020,4,28),1.78],[new Date(2020,4,29),1.78],[new Date(2020,4,30),1.78],[new Date(2020,4,31),1.78],[new Date(2020,5,1),1.78],[new Date(2020,5,2),1.78],[new Date(2020,5,3),1.78],[new Date(2020,5,4),1.78],[new Date(2020,5,5),1.78],[new Date(2020,5,6),1.78],[new Date(2020,5,7),1.78],[new Date(2020,5,8),1.78],[new Date(2020,5,9),1.78],[new Date(2020,5,10),1.78],[new Date(2020,5,11),1.78],[new Date(2020,5,12),1.78],[new Date(2020,5,13),1.78],[new Date(2020,5,14),1.78],[new Date(2020,5,15),1.78],[new Date(2020,5,16),1.78],[new Date(2020,5,17),1.78],[new Date(2020,5,18),1.78],[new Date(2020,5,19),1.78],[new Date(2020,5,20),1.78],[new Date(2020,5,21),1.78],[new Date(2020,5,22),1.78],[new Date(2020,5,23),1.78],[new Date(2020,5,24),1.78],[new Date(2020,5,25),1.78],[new Date(2020,5,26),1.78],[new Date(2020,5,27),1.78],[new Date(2020,5,28),1.78],[new Date(2020,5,29),1.78],[new Date(2020,5,30),1.78],[new Date(2020,6,1),1.78],[new Date(2020,6,2),1.78],[new Date(2020,6,3),1.78],[new Date(2020,6,4),1.78],[new Date(2020,6,5),1.78],[new Date(2020,6,6),1.78],[new Date(2020,6,7),1.78],[new Date(2020,6,8),1.78],[new Date(2020,6,9),1.78],[new Date(2020,6,10),1.78],[new Date(2020,6,11),1.78],[new Date(2020,6,12),1.78],[new Date(2020,6,13),1.78],[new Date(2020,6,14),1.78],[new Date(2020,6,15),1.78],[new Date(2020,6,16),1.78],[new Date(2020,6,17),1.78],[new Date(2020,6,18),1.78],[new Date(2020,6,19),1.78],[new Date(2020,6,20),1.78],[new Date(2020,6,21),1.78],[new Date(2020,6,22),1.78],[new Date(2020,6,23),1.78],[new Date(2020,6,24),1.78],[new Date(2020,6,25),1.78],[new Date(2020,6,26),1.78],[new Date(2020,6,27),1.78],[new Date(2020,6,28),1.78],[new Date(2020,6,29),1.78],[new Date(2020,6,30),1.78],[new Date(2020,6,31),1.78],[new Date(2020,7,1),1.78],[new Date(2020,7,2),1.78],[new Date(2020,7,3),1.78],[new Date(2020,7,4),1.78],[new Date(2020,7,5),1.78],[new Date(2020,7,6),1.78],[new Date(2020,7,7),1.78],[new Date(2020,7,8),1.78],[new Date(2020,7,9),1.78],[new Date(2020,7,10),1.78],[new Date(2020,7,11),1.78],[new Date(2020,7,12),1.78],[new Date(2020,7,13),1.78],[new Date(2020,7,14),1.78],[new Date(2020,7,15),1.78],[new Date(2020,7,16),1.78],[new Date(2020,7,17),1.78],[new Date(2020,7,18),1.78],[new Date(2020,7,19),1.78],[new Date(2020,7,20),1.78],[new Date(2020,7,21),1.78],[new Date(2020,7,22),1.78],[new Date(2020,7,23),1.78],[new Date(2020,7,24),1.78],[new Date(2020,7,25),1.78],[new Date(2020,7,26),1.78],[new Date(2020,7,27),1.78],[new Date(2020,7,28),1.78],[new Date(2020,7,29),1.78],[new Date(2020,7,30),1.78],[new Date(2020,7,31),1.78],[new Date(2020,8,1),1.78],[new Date(2020,8,2),1.78],[new Date(2020,8,3),1.78],[new Date(2020,8,4),1.78],[new Date(2020,8,5),1.78],[new Date(2020,8,6),1.78],[new Date(2020,8,7),1.78],[new Date(2020,8,8),1.78],[new Date(2020,8,9),1.78],[new Date(2020,8,10),1.78],[new Date(2020,8,11),1.78],[new Date(2020,8,12),1.78],[new Date(2020,8,13),1.78],[new Date(2020,8,14),1.78],[new Date(2020,8,15),1.78],[new Date(2020,8,16),1.78],[new Date(2020,8,17),1.78],[new Date(2020,8,18),1.78],[new Date(2020,8,19),1.78],[new Date(2020,8,20),1.78],[new Date(2020,8,21),1.78],[new Date(2020,8,22),1.78],[new Date(2020,8,23),1.78],[new Date(2020,8,24),1.78],[new Date(2020,8,25),1.78],[new Date(2020,8,26),1.78],[new Date(2020,8,27),1.78],[new Date(2020,8,28),1.78],[new Date(2020,8,29),1.78],[new Date(2020,8,30),1.78],[new Date(2020,9,1),1.78],[new Date(2020,9,2),1.78],[new Date(2020,9,3),1.78],[new Date(2020,9,4),1.78],[new Date(2020,9,5),1.78],[new Date(2020,9,6),1.78],[new Date(2020,9,7),1.78],[new Date(2020,9,8),1.78],[new Date(2020,9,9),1.78],[new Date(2020,9,10),1.78],[new Date(2020,9,11),1.78],[new Date(2020,9,12),1.78],[new Date(2020,9,13),1.78],[new Date(2020,9,14),1.78],[new Date(2020,9,15),1.78],[new Date(2020,9,16),1.78],[new Date(2020,9,17),1.78],[new Date(2020,9,18),1.78],[new Date(2020,9,19),1.78],[new Date(2020,9,20),1.79],[new Date(2020,9,21),1.79],[new Date(2020,9,22),1.79],[new Date(2020,9,23),1.79],[new Date(2020,9,24),1.79],[new Date(2020,9,25),1.79],[new Date(2020,9,26),1.79],[new Date(2020,9,27),1.8],[new Date(2020,9,28),1.8],[new Date(2020,9,29),1.8],[new Date(2020,9,30),1.8],[new Date(2020,9,31),1.8],[new Date(2020,10,1),1.8],[new Date(2020,10,2),1.8],[new Date(2020,10,3),1.8],[new Date(2020,10,4),1.8],[new Date(2020,10,5),1.8],[new Date(2020,10,6),1.8],[new Date(2020,10,7),1.8],[new Date(2020,10,8),1.8],[new Date(2020,10,9),1.8],[new Date(2020,10,10),1.8],[new Date(2020,10,11),1.8],[new Date(2020,10,12),1.8],[new Date(2020,10,13),1.8],[new Date(2020,10,14),1.8],[new Date(2020,10,15),1.8],[new Date(2020,10,16),1.8],[new Date(2020,10,17),1.8],[new Date(2020,10,18),1.8],[new Date(2020,10,19),1.8],[new Date(2020,10,20),1.8],[new Date(2020,10,21),1.8],[new Date(2020,10,22),1.8],[new Date(2020,10,23),1.8],[new Date(2020,10,24),1.8],[new Date(2020,10,25),1.8],[new Date(2020,10,26),1.8],[new Date(2020,10,27),1.8],[new Date(2020,10,28),1.8],[new Date(2020,10,29),1.8],[new Date(2020,10,30),1.8],[new Date(2020,11,1),1.8],[new Date(2020,11,2),1.8],[new Date(2020,11,3),1.8],[new Date(2020,11,4),1.8],[new Date(2020,11,5),1.8],[new Date(2020,11,6),1.8],[new Date(2020,11,7),1.8],[new Date(2020,11,8),1.8],[new Date(2020,11,9),1.8],[new Date(2020,11,10),1.8],[new Date(2020,11,11),1.8],[new Date(2020,11,12),1.8],[new Date(2020,11,13),1.8],[new Date(2020,11,14),1.8],[new Date(2020,11,15),1.8],[new Date(2020,11,16),1.8],[new Date(2020,11,17),1.8],[new Date(2020,11,18),1.8],[new Date(2020,11,19),1.8],[new Date(2020,11,20),1.8],[new Date(2020,11,21),1.8],[new Date(2020,11,22),1.8],[new Date(2020,11,23),1.8],[new Date(2020,11,24),1.8],[new Date(2020,11,25),1.8],[new Date(2020,11,26),1.8],[new Date(2020,11,27),1.8],[new Date(2020,11,28),1.8],[new Date(2020,11,29),1.8],[new Date(2020,11,30),1.8],[new Date(2020,11,31),1.8],[new Date(2021,0,1),1.8],[new Date(2021,0,2),1.8],[new Date(2021,0,3),1.8],[new Date(2021,0,4),1.8],[new Date(2021,0,5),1.8],[new Date(2021,0,6),1.8],[new Date(2021,0,7),1.8],[new Date(2021,0,8),1.8],[new Date(2021,0,9),1.8],[new Date(2021,0,10),1.8],[new Date(2021,0,11),1.8],[new Date(2021,0,12),1.8],[new Date(2021,0,13),1.8],[new Date(2021,0,14),1.8],[new Date(2021,0,15),1.8],[new Date(2021,0,16),1.8],[new Date(2021,0,17),1.8],[new Date(2021,0,18),1.8],[new Date(2021,0,19),1.8],[new Date(2021,0,20),1.8],[new Date(2021,0,21),1.81],[new Date(2021,0,22),1.81],[new Date(2021,0,23),1.81],[new Date(2021,0,24),1.81],[new Date(2021,0,25),1.81],[new Date(2021,0,26),1.81],[new Date(2021,0,27),1.81],[new Date(2021,0,28),1.82],[new Date(2021,0,29),1.82],[new Date(2021,0,30),1.82],[new Date(2021,0,31),1.82],[new Date(2021,1,1),1.82],[new Date(2021,1,2),1.82],[new Date(2021,1,3),1.82],[new Date(2021,1,4),1.82],[new Date(2021,1,5),1.82],[new Date(2021,1,6),1.82],[new Date(2021,1,7),1.82],[new Date(2021,1,8),1.82],[new Date(2021,1,9),1.82],[new Date(2021,1,10),1.82],[new Date(2021,1,11),1.82],[new Date(2021,1,12),1.82],[new Date(2021,1,13),1.82],[new Date(2021,1,14),1.82],[new Date(2021,1,15),1.82],[new Date(2021,1,16),1.83],[new Date(2021,1,17),1.83],[new Date(2021,1,18),1.83],[new Date(2021,1,19),1.83],[new Date(2021,1,20),1.83],[new Date(2021,1,21),1.83],[new Date(2021,1,22),1.83],[new Date(2021,1,23),1.84],[new Date(2021,1,24),1.84],[new Date(2021,1,25),1.84],[new Date(2021,1,26),1.84],[new Date(2021,1,27),1.84],[new Date(2021,1,28),1.84],[new Date(2021,2,1),1.84],[new Date(2021,2,2),1.85],[new Date(2021,2,3),1.85],[new Date(2021,2,4),1.85],[new Date(2021,2,5),1.85],[new Date(2021,2,6),1.85],[new Date(2021,2,7),1.85],[new Date(2021,2,8),1.85],[new Date(2021,2,9),1.85],[new Date(2021,2,10),1.86],[new Date(2021,2,11),1.86],[new Date(2021,2,12),1.86],[new Date(2021,2,13),1.86],[new Date(2021,2,14),1.86],[new Date(2021,2,15),1.86],[new Date(2021,2,16),1.87],[new Date(2021,2,17),1.87],[new Date(2021,2,18),1.87],[new Date(2021,2,19),1.87],[new Date(2021,2,20),1.87],[new Date(2021,2,21),1.87],[new Date(2021,2,22),1.87],[new Date(2021,2,23),1.87],[new Date(2021,2,24),1.87],[new Date(2021,2,25),1.87],[new Date(2021,2,26),1.87],[new Date(2021,2,26),1.87],[new Date(2021,2,27),1.87],[new Date(2021,2,27),1.87],[new Date(2021,2,28),1.87],[new Date(2021,2,28),1.87],[new Date(2021,2,29),1.87],[new Date(2021,2,30),1.88],[new Date(2021,2,30),1.88],[new Date(2021,2,31),1.88],[new Date(2021,3,1),1.88],[new Date(2021,3,2),1.88],[new Date(2021,3,3),1.88],[new Date(2021,3,4),1.88],[new Date(2021,3,5),1.88],[new Date(2021,3,6),1.89],[new Date(2021,3,7),1.89],[new Date(2021,3,8),1.89],[new Date(2021,3,9),1.89],[new Date(2021,3,10),1.89],[new Date(2021,3,11),1.89],[new Date(2021,3,12),1.89],[new Date(2021,3,13),1.9]],[[new Date(2020,3,13),1.72],[new Date(2020,3,14),1.72],[new Date(2020,3,15),1.72],[new Date(2020,3,16),1.72],[new Date(2020,3,17),1.72],[new Date(2020,3,18),1.72],[new Date(2020,3,19),1.71],[new Date(2020,3,20),1.71],[new Date(2020,3,21),1.71],[new Date(2020,3,22),1.71],[new Date(2020,3,23),1.71],[new Date(2020,3,24),1.71],[new Date(2020,3,25),1.71],[new Date(2020,3,26),1.7],[new Date(2020,3,27),1.7],[new Date(2020,3,28),1.7],[new Date(2020,3,29),1.7],[new Date(2020,3,30),1.7],[new Date(2020,4,1),1.7],[new Date(2020,4,2),1.7],[new Date(2020,4,3),1.69],[new Date(2020,4,4),1.69],[new Date(2020,4,5),1.69],[new Date(2020,4,6),1.69],[new Date(2020,4,7),1.69],[new Date(2020,4,8),1.69],[new Date(2020,4,9),1.69],[new Date(2020,4,10),1.68],[new Date(2020,4,11),1.68],[new Date(2020,4,12),1.68],[new Date(2020,4,13),1.68],[new Date(2020,4,14),1.68],[new Date(2020,4,15),1.68],[new Date(2020,4,16),1.68],[new Date(2020,4,17),1.68],[new Date(2020,4,18),1.68],[new Date(2020,4,19),1.68],[new Date(2020,4,20),1.68],[new Date(2020,4,21),1.68],[new Date(2020,4,22),1.68],[new Date(2020,4,23),1.68],[new Date(2020,4,24),1.68],[new Date(2020,4,25),1.68],[new Date(2020,4,26),1.68],[new Date(2020,4,27),1.68],[new Date(2020,4,28),1.68],[new Date(2020,4,29),1.68],[new Date(2020,4,30),1.68],[new Date(2020,4,31),1.68],[new Date(2020,5,1),1.68],[new Date(2020,5,2),1.68],[new Date(2020,5,3),1.68],[new Date(2020,5,4),1.68],[new Date(2020,5,5),1.68],[new Date(2020,5,6),1.68],[new Date(2020,5,7),1.68],[new Date(2020,5,8),1.68],[new Date(2020,5,9),1.68],[new Date(2020,5,10),1.68],[new Date(2020,5,11),1.68],[new Date(2020,5,12),1.68],[new Date(2020,5,13),1.68],[new Date(2020,5,14),1.68],[new Date(2020,5,15),1.68],[new Date(2020,5,16),1.68],[new Date(2020,5,17),1.68],[new Date(2020,5,18),1.68],[new Date(2020,5,19),1.68],[new Date(2020,5,20),1.68],[new Date(2020,5,21),1.68],[new Date(2020,5,22),1.68],[new Date(2020,5,23),1.68],[new Date(2020,5,24),1.68],[new Date(2020,5,25),1.68],[new Date(2020,5,26),1.68],[new Date(2020,5,27),1.68],[new Date(2020,5,28),1.68],[new Date(2020,5,29),1.68],[new Date(2020,5,30),1.68],[new Date(2020,6,1),1.68],[new Date(2020,6,2),1.68],[new Date(2020,6,3),1.68],[new Date(2020,6,4),1.68],[new Date(2020,6,5),1.68],[new Date(2020,6,6),1.68],[new Date(2020,6,7),1.68],[new Date(2020,6,8),1.68],[new Date(2020,6,9),1.68],[new Date(2020,6,10),1.68],[new Date(2020,6,11),1.68],[new Date(2020,6,12),1.68],[new Date(2020,6,13),1.68],[new Date(2020,6,14),1.68],[new Date(2020,6,15),1.68],[new Date(2020,6,16),1.68],[new Date(2020,6,17),1.68],[new Date(2020,6,18),1.68],[new Date(2020,6,19),1.68],[new Date(2020,6,20),1.68],[new Date(2020,6,21),1.68],[new Date(2020,6,22),1.68],[new Date(2020,6,23),1.68],[new Date(2020,6,24),1.68],[new Date(2020,6,25),1.68],[new Date(2020,6,26),1.68],[new Date(2020,6,27),1.68],[new Date(2020,6,28),1.68],[new Date(2020,6,29),1.68],[new Date(2020,6,30),1.68],[new Date(2020,6,31),1.68],[new Date(2020,7,1),1.68],[new Date(2020,7,2),1.68],[new Date(2020,7,3),1.68],[new Date(2020,7,4),1.68],[new Date(2020,7,5),1.68],[new Date(2020,7,6),1.68],[new Date(2020,7,7),1.68],[new Date(2020,7,8),1.68],[new Date(2020,7,9),1.68],[new Date(2020,7,10),1.68],[new Date(2020,7,11),1.68],[new Date(2020,7,12),1.68],[new Date(2020,7,13),1.68],[new Date(2020,7,14),1.68],[new Date(2020,7,15),1.68],[new Date(2020,7,16),1.68],[new Date(2020,7,17),1.68],[new Date(2020,7,18),1.68],[new Date(2020,7,19),1.68],[new Date(2020,7,20),1.68],[new Date(2020,7,21),1.68],[new Date(2020,7,22),1.68],[new Date(2020,7,23),1.68],[new Date(2020,7,24),1.68],[new Date(2020,7,25),1.68],[new Date(2020,7,26),1.68],[new Date(2020,7,27),1.68],[new Date(2020,7,28),1.68],[new Date(2020,7,29),1.68],[new Date(2020,7,30),1.68],[new Date(2020,7,31),1.68],[new Date(2020,8,1),1.68],[new Date(2020,8,2),1.68],[new Date(2020,8,3),1.68],[new Date(2020,8,4),1.68],[new Date(2020,8,5),1.68],[new Date(2020,8,6),1.68],[new Date(2020,8,7),1.68],[new Date(2020,8,8),1.68],[new Date(2020,8,9),1.68],[new Date(2020,8,10),1.68],[new Date(2020,8,11),1.68],[new Date(2020,8,12),1.68],[new Date(2020,8,13),1.68],[new Date(2020,8,14),1.68],[new Date(2020,8,15),1.68],[new Date(2020,8,16),1.68],[new Date(2020,8,17),1.68],[new Date(2020,8,18),1.68],[new Date(2020,8,19),1.68],[new Date(2020,8,20),1.68],[new Date(2020,8,21),1.68],[new Date(2020,8,22),1.68],[new Date(2020,8,23),1.68],[new Date(2020,8,24),1.68],[new Date(2020,8,25),1.68],[new Date(2020,8,26),1.68],[new Date(2020,8,27),1.68],[new Date(2020,8,28),1.68],[new Date(2020,8,29),1.68],[new Date(2020,8,30),1.68],[new Date(2020,9,1),1.68],[new Date(2020,9,2),1.68],[new Date(2020,9,3),1.68],[new Date(2020,9,4),1.68],[new Date(2020,9,5),1.68],[new Date(2020,9,6),1.68],[new Date(2020,9,7),1.68],[new Date(2020,9,8),1.68],[new Date(2020,9,9),1.68],[new Date(2020,9,10),1.68],[new Date(2020,9,11),1.68],[new Date(2020,9,12),1.68],[new Date(2020,9,13),1.68],[new Date(2020,9,14),1.68],[new Date(2020,9,15),1.68],[new Date(2020,9,16),1.68],[new Date(2020,9,17),1.68],[new Date(2020,9,18),1.68],[new Date(2020,9,19),1.68],[new Date(2020,9,20),1.69],[new Date(2020,9,21),1.69],[new Date(2020,9,22),1.69],[new Date(2020,9,23),1.69],[new Date(2020,9,24),1.69],[new Date(2020,9,25),1.69],[new Date(2020,9,26),1.69],[new Date(2020,9,27),1.7],[new Date(2020,9,28),1.7],[new Date(2020,9,29),1.7],[new Date(2020,9,30),1.7],[new Date(2020,9,31),1.7],[new Date(2020,10,1),1.7],[new Date(2020,10,2),1.7],[new Date(2020,10,3),1.7],[new Date(2020,10,4),1.7],[new Date(2020,10,5),1.7],[new Date(2020,10,6),1.7],[new Date(2020,10,7),1.7],[new Date(2020,10,8),1.7],[new Date(2020,10,9),1.7],[new Date(2020,10,10),1.7],[new Date(2020,10,11),1.7],[new Date(2020,10,12),1.7],[new Date(2020,10,13),1.7],[new Date(2020,10,14),1.7],[new Date(2020,10,15),1.7],[new Date(2020,10,16),1.7],[new Date(2020,10,17),1.7],[new Date(2020,10,18),1.7],[new Date(2020,10,19),1.7],[new Date(2020,10,20),1.7],[new Date(2020,10,21),1.7],[new Date(2020,10,22),1.7],[new Date(2020,10,23),1.7],[new Date(2020,10,24),1.7],[new Date(2020,10,25),1.7],[new Date(2020,10,26),1.7],[new Date(2020,10,27),1.7],[new Date(2020,10,28),1.7],[new Date(2020,10,29),1.7],[new Date(2020,10,30),1.7],[new Date(2020,11,1),1.7],[new Date(2020,11,2),1.7],[new Date(2020,11,3),1.7],[new Date(2020,11,4),1.7],[new Date(2020,11,5),1.7],[new Date(2020,11,6),1.7],[new Date(2020,11,7),1.7],[new Date(2020,11,8),1.7],[new Date(2020,11,9),1.7],[new Date(2020,11,10),1.7],[new Date(2020,11,11),1.7],[new Date(2020,11,12),1.7],[new Date(2020,11,13),1.7],[new Date(2020,11,14),1.7],[new Date(2020,11,15),1.7],[new Date(2020,11,16),1.7],[new Date(2020,11,17),1.7],[new Date(2020,11,18),1.7],[new Date(2020,11,19),1.7],[new Date(2020,11,20),1.7],[new Date(2020,11,21),1.7],[new Date(2020,11,22),1.7],[new Date(2020,11,23),1.7],[new Date(2020,11,24),1.7],[new Date(2020,11,25),1.7],[new Date(2020,11,26),1.7],[new Date(2020,11,27),1.7],[new Date(2020,11,28),1.7],[new Date(2020,11,29),1.7],[new Date(2020,11,30),1.7],[new Date(2020,11,31),1.7],[new Date(2021,0,1),1.7],[new Date(2021,0,2),1.7],[new Date(2021,0,3),1.7],[new Date(2021,0,4),1.7],[new Date(2021,0,5),1.7],[new Date(2021,0,6),1.7],[new Date(2021,0,7),1.7],[new Date(2021,0,8),1.7],[new Date(2021,0,9),1.7],[new Date(2021,0,10),1.7],[new Date(2021,0,11),1.7],[new Date(2021,0,12),1.7],[new Date(2021,0,13),1.7],[new Date(2021,0,14),1.7],[new Date(2021,0,15),1.7],[new Date(2021,0,16),1.7],[new Date(2021,0,17),1.7],[new Date(2021,0,18),1.7],[new Date(2021,0,19),1.7],[new Date(2021,0,20),1.7],[new Date(2021,0,21),1.71],[new Date(2021,0,22),1.71],[new Date(2021,0,23),1.71],[new Date(2021,0,24),1.71],[new Date(2021,0,25),1.71],[new Date(2021,0,26),1.71],[new Date(2021,0,27),1.71],[new Date(2021,0,28),1.72],[new Date(2021,0,29),1.72],[new Date(2021,0,30),1.72],[new Date(2021,0,31),1.72],[new Date(2021,1,1),1.72],[new Date(2021,1,2),1.72],[new Date(2021,1,3),1.72],[new Date(2021,1,4),1.72],[new Date(2021,1,5),1.72],[new Date(2021,1,6),1.72],[new Date(2021,1,7),1.72],[new Date(2021,1,8),1.72],[new Date(2021,1,9),1.72],[new Date(2021,1,10),1.72],[new Date(2021,1,11),1.72],[new Date(2021,1,12),1.72],[new Date(2021,1,13),1.72],[new Date(2021,1,14),1.72],[new Date(2021,1,15),1.72],[new Date(2021,1,16),1.73],[new Date(2021,1,17),1.73],[new Date(2021,1,18),1.73],[new Date(2021,1,19),1.73],[new Date(2021,1,20),1.73],[new Date(2021,1,21),1.73],[new Date(2021,1,22),1.73],[new Date(2021,1,23),1.74],[new Date(2021,1,24),1.74],[new Date(2021,1,25),1.74],[new Date(2021,1,26),1.74],[new Date(2021,1,27),1.74],[new Date(2021,1,28),1.74],[new Date(2021,2,1),1.74],[new Date(2021,2,2),1.75],[new Date(2021,2,3),1.75],[new Date(2021,2,4),1.75],[new Date(2021,2,5),1.75],[new Date(2021,2,6),1.75],[new Date(2021,2,7),1.75],[new Date(2021,2,8),1.75],[new Date(2021,2,9),1.75],[new Date(2021,2,10),1.76],[new Date(2021,2,11),1.76],[new Date(2021,2,12),1.76],[new Date(2021,2,13),1.76],[new Date(2021,2,14),1.76],[new Date(2021,2,15),1.76],[new Date(2021,2,16),1.77],[new Date(2021,2,17),1.77],[new Date(2021,2,18),1.77],[new Date(2021,2,19),1.77],[new Date(2021,2,20),1.77],[new Date(2021,2,21),1.77],[new Date(2021,2,22),1.77],[new Date(2021,2,23),1.77],[new Date(2021,2,24),1.77],[new Date(2021,2,25),1.77],[new Date(2021,2,26),1.77],[new Date(2021,2,26),1.77],[new Date(2021,2,27),1.77],[new Date(2021,2,27),1.77],[new Date(2021,2,28),1.77],[new Date(2021,2,28),1.77],[new Date(2021,2,29),1.77],[new Date(2021,2,30),1.78],[new Date(2021,2,31),1.78],[new Date(2021,3,1),1.78],[new Date(2021,3,2),1.78],[new Date(2021,3,3),1.78],[new Date(2021,3,4),1.78],[new Date(2021,3,5),1.78],[new Date(2021,3,6),1.79],[new Date(2021,3,7),1.79],[new Date(2021,3,8),1.79],[new Date(2021,3,9),1.79],[new Date(2021,3,10),1.79],[new Date(2021,3,11),1.79],[new Date(2021,3,12),1.79],[new Date(2021,3,13),1.8]],[[new Date(2020,3,13),1.82],[new Date(2020,3,14),1.82],[new Date(2020,3,15),1.82],[new Date(2020,3,16),1.82],[new Date(2020,3,17),1.82],[new Date(2020,3,18),1.82],[new Date(2020,3,19),1.81],[new Date(2020,3,20),1.81],[new Date(2020,3,21),1.81],[new Date(2020,3,22),1.81],[new Date(2020,3,23),1.81],[new Date(2020,3,24),1.81],[new Date(2020,3,25),1.81],[new Date(2020,3,26),1.8],[new Date(2020,3,27),1.8],[new Date(2020,3,28),1.8],[new Date(2020,3,29),1.8],[new Date(2020,3,30),1.8],[new Date(2020,4,1),1.8],[new Date(2020,4,2),1.8],[new Date(2020,4,3),1.79],[new Date(2020,4,4),1.79],[new Date(2020,4,5),1.79],[new Date(2020,4,6),1.79],[new Date(2020,4,7),1.79],[new Date(2020,4,8),1.79],[new Date(2020,4,9),1.79],[new Date(2020,4,10),1.78],[new Date(2020,4,11),1.78],[new Date(2020,4,12),1.78],[new Date(2020,4,13),1.78],[new Date(2020,4,14),1.78],[new Date(2020,4,15),1.78],[new Date(2020,4,16),1.78],[new Date(2020,4,17),1.78],[new Date(2020,4,18),1.78],[new Date(2020,4,19),1.78],[new Date(2020,4,20),1.78],[new Date(2020,4,21),1.78],[new Date(2020,4,22),1.78],[new Date(2020,4,23),1.78],[new Date(2020,4,24),1.78],[new Date(2020,4,25),1.78],[new Date(2020,4,26),1.78],[new Date(2020,4,27),1.78],[new Date(2020,4,28),1.78],[new Date(2020,4,29),1.78],[new Date(2020,4,30),1.78],[new Date(2020,4,31),1.78],[new Date(2020,5,1),1.78],[new Date(2020,5,2),1.78],[new Date(2020,5,3),1.78],[new Date(2020,5,4),1.78],[new Date(2020,5,5),1.78],[new Date(2020,5,6),1.78],[new Date(2020,5,7),1.78],[new Date(2020,5,8),1.78],[new Date(2020,5,9),1.78],[new Date(2020,5,10),1.78],[new Date(2020,5,11),1.78],[new Date(2020,5,12),1.78],[new Date(2020,5,13),1.78],[new Date(2020,5,14),1.78],[new Date(2020,5,15),1.78],[new Date(2020,5,16),1.78],[new Date(2020,5,17),1.78],[new Date(2020,5,18),1.78],[new Date(2020,5,19),1.78],[new Date(2020,5,20),1.78],[new Date(2020,5,21),1.78],[new Date(2020,5,22),1.78],[new Date(2020,5,23),1.78],[new Date(2020,5,24),1.78],[new Date(2020,5,25),1.78],[new Date(2020,5,26),1.78],[new Date(2020,5,27),1.78],[new Date(2020,5,28),1.78],[new Date(2020,5,29),1.78],[new Date(2020,5,30),1.78],[new Date(2020,6,1),1.78],[new Date(2020,6,2),1.78],[new Date(2020,6,3),1.78],[new Date(2020,6,4),1.78],[new Date(2020,6,5),1.78],[new Date(2020,6,6),1.78],[new Date(2020,6,7),1.78],[new Date(2020,6,8),1.78],[new Date(2020,6,9),1.78],[new Date(2020,6,10),1.78],[new Date(2020,6,11),1.78],[new Date(2020,6,12),1.78],[new Date(2020,6,13),1.78],[new Date(2020,6,14),1.78],[new Date(2020,6,15),1.78],[new Date(2020,6,16),1.78],[new Date(2020,6,17),1.78],[new Date(2020,6,18),1.78],[new Date(2020,6,19),1.78],[new Date(2020,6,20),1.78],[new Date(2020,6,21),1.78],[new Date(2020,6,22),1.78],[new Date(2020,6,23),1.78],[new Date(2020,6,24),1.78],[new Date(2020,6,25),1.78],[new Date(2020,6,26),1.78],[new Date(2020,6,27),1.78],[new Date(2020,6,28),1.78],[new Date(2020,6,29),1.78],[new Date(2020,6,30),1.78],[new Date(2020,6,31),1.78],[new Date(2020,7,1),1.78],[new Date(2020,7,2),1.78],[new Date(2020,7,3),1.78],[new Date(2020,7,4),1.78],[new Date(2020,7,5),1.78],[new Date(2020,7,6),1.78],[new Date(2020,7,7),1.78],[new Date(2020,7,8),1.78],[new Date(2020,7,9),1.78],[new Date(2020,7,10),1.78],[new Date(2020,7,11),1.78],[new Date(2020,7,12),1.78],[new Date(2020,7,13),1.78],[new Date(2020,7,14),1.78],[new Date(2020,7,15),1.78],[new Date(2020,7,16),1.78],[new Date(2020,7,17),1.78],[new Date(2020,7,18),1.78],[new Date(2020,7,19),1.78],[new Date(2020,7,20),1.78],[new Date(2020,7,21),1.78],[new Date(2020,7,22),1.78],[new Date(2020,7,23),1.78],[new Date(2020,7,24),1.78],[new Date(2020,7,25),1.78],[new Date(2020,7,26),1.78],[new Date(2020,7,27),1.78],[new Date(2020,7,28),1.78],[new Date(2020,7,29),1.78],[new Date(2020,7,30),1.78],[new Date(2020,7,31),1.78],[new Date(2020,8,1),1.78],[new Date(2020,8,2),1.78],[new Date(2020,8,3),1.78],[new Date(2020,8,4),1.78],[new Date(2020,8,5),1.78],[new Date(2020,8,6),1.78],[new Date(2020,8,7),1.78],[new Date(2020,8,8),1.78],[new Date(2020,8,9),1.78],[new Date(2020,8,10),1.78],[new Date(2020,8,11),1.78],[new Date(2020,8,12),1.78],[new Date(2020,8,13),1.78],[new Date(2020,8,14),1.78],[new Date(2020,8,15),1.78],[new Date(2020,8,16),1.78],[new Date(2020,8,17),1.78],[new Date(2020,8,18),1.78],[new Date(2020,8,19),1.78],[new Date(2020,8,20),1.78],[new Date(2020,8,21),1.78],[new Date(2020,8,22),1.78],[new Date(2020,8,23),1.78],[new Date(2020,8,24),1.78],[new Date(2020,8,25),1.78],[new Date(2020,8,26),1.78],[new Date(2020,8,27),1.78],[new Date(2020,8,28),1.78],[new Date(2020,8,29),1.78],[new Date(2020,8,30),1.78],[new Date(2020,9,1),1.78],[new Date(2020,9,2),1.78],[new Date(2020,9,3),1.78],[new Date(2020,9,4),1.78],[new Date(2020,9,5),1.78],[new Date(2020,9,6),1.78],[new Date(2020,9,7),1.78],[new Date(2020,9,8),1.78],[new Date(2020,9,9),1.78],[new Date(2020,9,10),1.78],[new Date(2020,9,11),1.78],[new Date(2020,9,12),1.78],[new Date(2020,9,13),1.78],[new Date(2020,9,14),1.78],[new Date(2020,9,15),1.78],[new Date(2020,9,16),1.78],[new Date(2020,9,17),1.78],[new Date(2020,9,18),1.78],[new Date(2020,9,19),1.78],[new Date(2020,9,20),1.79],[new Date(2020,9,21),1.79],[new Date(2020,9,22),1.79],[new Date(2020,9,23),1.79],[new Date(2020,9,24),1.79],[new Date(2020,9,25),1.79],[new Date(2020,9,26),1.79],[new Date(2020,9,27),1.8],[new Date(2020,9,28),1.8],[new Date(2020,9,29),1.8],[new Date(2020,9,30),1.8],[new Date(2020,9,31),1.8],[new Date(2020,10,1),1.8],[new Date(2020,10,2),1.8],[new Date(2020,10,3),1.8],[new Date(2020,10,4),1.8],[new Date(2020,10,5),1.8],[new Date(2020,10,6),1.8],[new Date(2020,10,7),1.8],[new Date(2020,10,8),1.8],[new Date(2020,10,9),1.8],[new Date(2020,10,10),1.8],[new Date(2020,10,11),1.8],[new Date(2020,10,12),1.8],[new Date(2020,10,13),1.8],[new Date(2020,10,14),1.8],[new Date(2020,10,15),1.8],[new Date(2020,10,16),1.8],[new Date(2020,10,17),1.8],[new Date(2020,10,18),1.8],[new Date(2020,10,19),1.8],[new Date(2020,10,20),1.8],[new Date(2020,10,21),1.8],[new Date(2020,10,22),1.8],[new Date(2020,10,23),1.8],[new Date(2020,10,24),1.8],[new Date(2020,10,25),1.8],[new Date(2020,10,26),1.8],[new Date(2020,10,27),1.8],[new Date(2020,10,28),1.8],[new Date(2020,10,29),1.8],[new Date(2020,10,30),1.8],[new Date(2020,11,1),1.8],[new Date(2020,11,2),1.8],[new Date(2020,11,3),1.8],[new Date(2020,11,4),1.8],[new Date(2020,11,5),1.8],[new Date(2020,11,6),1.8],[new Date(2020,11,7),1.8],[new Date(2020,11,8),1.8],[new Date(2020,11,9),1.8],[new Date(2020,11,10),1.8],[new Date(2020,11,11),1.8],[new Date(2020,11,12),1.8],[new Date(2020,11,13),1.8],[new Date(2020,11,14),1.8],[new Date(2020,11,15),1.8],[new Date(2020,11,16),1.8],[new Date(2020,11,17),1.8],[new Date(2020,11,18),1.8],[new Date(2020,11,19),1.8],[new Date(2020,11,20),1.8],[new Date(2020,11,21),1.8],[new Date(2020,11,22),1.8],[new Date(2020,11,23),1.8],[new Date(2020,11,24),1.8],[new Date(2020,11,25),1.8],[new Date(2020,11,26),1.8],[new Date(2020,11,27),1.8],[new Date(2020,11,28),1.8],[new Date(2020,11,29),1.8],[new Date(2020,11,30),1.8],[new Date(2020,11,31),1.8],[new Date(2021,0,1),1.8],[new Date(2021,0,2),1.8],[new Date(2021,0,3),1.8],[new Date(2021,0,4),1.8],[new Date(2021,0,5),1.8],[new Date(2021,0,6),1.8],[new Date(2021,0,7),1.8],[new Date(2021,0,8),1.8],[new Date(2021,0,9),1.8],[new Date(2021,0,10),1.8],[new Date(2021,0,11),1.8],[new Date(2021,0,12),1.8],[new Date(2021,0,13),1.8],[new Date(2021,0,14),1.8],[new Date(2021,0,15),1.8],[new Date(2021,0,16),1.8],[new Date(2021,0,17),1.8],[new Date(2021,0,18),1.8],[new Date(2021,0,19),1.8],[new Date(2021,0,20),1.8],[new Date(2021,0,21),1.81],[new Date(2021,0,22),1.81],[new Date(2021,0,23),1.81],[new Date(2021,0,24),1.81],[new Date(2021,0,25),1.81],[new Date(2021,0,26),1.81],[new Date(2021,0,27),1.81],[new Date(2021,0,28),1.82],[new Date(2021,0,29),1.82],[new Date(2021,0,30),1.82],[new Date(2021,0,31),1.82],[new Date(2021,1,1),1.82],[new Date(2021,1,2),1.82],[new Date(2021,1,3),1.82],[new Date(2021,1,4),1.82],[new Date(2021,1,5),1.82],[new Date(2021,1,6),1.82],[new Date(2021,1,7),1.82],[new Date(2021,1,8),1.82],[new Date(2021,1,9),1.82],[new Date(2021,1,10),1.82],[new Date(2021,1,11),1.82],[new Date(2021,1,12),1.82],[new Date(2021,1,13),1.82],[new Date(2021,1,14),1.82],[new Date(2021,1,15),1.82],[new Date(2021,1,16),1.83],[new Date(2021,1,17),1.83],[new Date(2021,1,18),1.83],[new Date(2021,1,19),1.83],[new Date(2021,1,20),1.83],[new Date(2021,1,21),1.83],[new Date(2021,1,22),1.83],[new Date(2021,1,23),1.84],[new Date(2021,1,24),1.84],[new Date(2021,1,25),1.84],[new Date(2021,1,26),1.84],[new Date(2021,1,27),1.84],[new Date(2021,1,28),1.84],[new Date(2021,2,1),1.84],[new Date(2021,2,2),1.85],[new Date(2021,2,3),1.85],[new Date(2021,2,4),1.85],[new Date(2021,2,5),1.85],[new Date(2021,2,6),1.85],[new Date(2021,2,7),1.85],[new Date(2021,2,8),1.85],[new Date(2021,2,9),1.85],[new Date(2021,2,10),1.86],[new Date(2021,2,10),1.86],[new Date(2021,2,11),1.86],[new Date(2021,2,11),1.86],[new Date(2021,2,12),1.86],[new Date(2021,2,12),1.86],[new Date(2021,2,13),1.86],[new Date(2021,2,13),1.86],[new Date(2021,2,14),1.86],[new Date(2021,2,14),1.86],[new Date(2021,2,15),1.86],[new Date(2021,2,15),1.86],[new Date(2021,2,16),1.87],[new Date(2021,2,17),1.87],[new Date(2021,2,18),1.87],[new Date(2021,2,19),1.87],[new Date(2021,2,20),1.87],[new Date(2021,2,21),1.87],[new Date(2021,2,22),1.87],[new Date(2021,2,23),1.87],[new Date(2021,2,24),1.87],[new Date(2021,2,25),1.87],[new Date(2021,2,26),1.87],[new Date(2021,2,26),1.87],[new Date(2021,2,27),1.87],[new Date(2021,2,27),1.87],[new Date(2021,2,28),1.87],[new Date(2021,2,28),1.87],[new Date(2021,2,29),1.87],[new Date(2021,2,30),1.88],[new Date(2021,2,31),1.88],[new Date(2021,3,1),1.88],[new Date(2021,3,2),1.88],[new Date(2021,3,3),1.88],[new Date(2021,3,4),1.88],[new Date(2021,3,5),1.88],[new Date(2021,3,6),1.89],[new Date(2021,3,7),1.89],[new Date(2021,3,8),1.89],[new Date(2021,3,9),1.89],[new Date(2021,3,10),1.89],[new Date(2021,3,11),1.89],[new Date(2021,3,12),1.89],[new Date(2021,3,13),1.9]]],
+			{ title:'График изменения цен на АЗС',
+			animate: true,
+			animateReplot: true,
+			axes:{
+				xaxis:{
+					renderer:$.jqplot.DateAxisRenderer,
+					tickOptions:{formatString:'%d.%m.%Y'},
+					rendererOptions:{formatString:'%d.%m.%Y'},
+					label: "Дата",
+					min: 
+						'13.04.2020'
+,
+					max: 
+						'13.04.2021'
+,
+					
+					numberTicks: undefined 
+
+					
+					},
+				yaxis:{
+					tickOptions:{
+           				 formatString:	'%.2f'
+
+          				  },
+					
+					labelRenderer: $.jqplot.CanvasAxisLabelRenderer,					
+					label: "Белорусские рубли"
+
+				}
+			},
+			seriesDefaults: {
+				markerOptions:{
+					//style: 'circle',
+					lineWidth: 2,
+					size:2,
+					shadow: false
+				}
+			},
+ 			series: [{color:'#D81E05'},{color:'#FFFF00'},{color:'#008000'}],
+ 			
+ 			legend: {
+ 				show:true,
+ 				placement: 'outsideGrid',
+ 				labels: labels,
+ 				location: 'ne',
+ 				rowSpacing: '0px'
+ 			},
+ 			
+ 			highlighter: {
+ 				show: true,
+ 				
+ 				sizeAdjust: 4
+ 				
+ 				}
+ 			
+		});
+})
+</script>
+<div id="chartdiv" style="width: 100%; height: 400px;"></div>       
+Изменение цен на топливо:АИ-95<br /><div class="h-ugc"><table class="beloil_table" style="visibility:visible;"><tr><th>Дата</th><th>Цена</th></tr><tr><td>13.04.2021</td><td>1.9</td></tr><tr><td>06.04.2021</td><td>1.89</td></tr><tr><td>30.03.2021</td><td>1.88</td></tr><tr><td>16.03.2021</td><td>1.87</td></tr><tr><td>10.03.2021</td><td>1.86</td></tr><tr><td>02.03.2021</td><td>1.85</td></tr><tr><td>23.02.2021</td><td>1.84</td></tr><tr><td>16.02.2021</td><td>1.83</td></tr><tr><td>28.01.2021</td><td>1.82</td></tr><tr><td>21.01.2021</td><td>1.81</td></tr><tr><td>27.10.2020</td><td>1.8</td></tr><tr><td>20.10.2020</td><td>1.79</td></tr><tr><td>10.05.2020</td><td>1.78</td></tr><tr><td>03.05.2020</td><td>1.79</td></tr><tr><td>26.04.2020</td><td>1.8</td></tr><tr><td>19.04.2020</td><td>1.81</td></tr><tr><td>13.04.2020</td><td>1.82</td></tr></table></div>Изменение цен на топливо:АИ-92<br /><div class="h-ugc"><table class="beloil_table" style="visibility:visible;"><tr><th>Дата</th><th>Цена</th></tr><tr><td>13.04.2021</td><td>1.8</td></tr><tr><td>06.04.2021</td><td>1.79</td></tr><tr><td>30.03.2021</td><td>1.78</td></tr><tr><td>16.03.2021</td><td>1.77</td></tr><tr><td>10.03.2021</td><td>1.76</td></tr><tr><td>02.03.2021</td><td>1.75</td></tr><tr><td>23.02.2021</td><td>1.74</td></tr><tr><td>16.02.2021</td><td>1.73</td></tr><tr><td>28.01.2021</td><td>1.72</td></tr><tr><td>21.01.2021</td><td>1.71</td></tr><tr><td>27.10.2020</td><td>1.7</td></tr><tr><td>20.10.2020</td><td>1.69</td></tr><tr><td>10.05.2020</td><td>1.68</td></tr><tr><td>03.05.2020</td><td>1.69</td></tr><tr><td>26.04.2020</td><td>1.7</td></tr><tr><td>19.04.2020</td><td>1.71</td></tr><tr><td>13.04.2020</td><td>1.72</td></tr></table></div>Изменение цен на топливо:ДТ<br /><div class="h-ugc"><table class="beloil_table" style="visibility:visible;"><tr><th>Дата</th><th>Цена</th></tr><tr><td>13.04.2021</td><td>1.9</td></tr><tr><td>06.04.2021</td><td>1.89</td></tr><tr><td>30.03.2021</td><td>1.88</td></tr><tr><td>16.03.2021</td><td>1.87</td></tr><tr><td>10.03.2021</td><td>1.86</td></tr><tr><td>02.03.2021</td><td>1.85</td></tr><tr><td>23.02.2021</td><td>1.84</td></tr><tr><td>16.02.2021</td><td>1.83</td></tr><tr><td>28.01.2021</td><td>1.82</td></tr><tr><td>21.01.2021</td><td>1.81</td></tr><tr><td>27.10.2020</td><td>1.8</td></tr><tr><td>20.10.2020</td><td>1.79</td></tr><tr><td>10.05.2020</td><td>1.78</td></tr><tr><td>03.05.2020</td><td>1.79</td></tr><tr><td>26.04.2020</td><td>1.8</td></tr><tr><td>19.04.2020</td><td>1.81</td></tr><tr><td>13.04.2020</td><td>1.82</td></tr></table></div>
+
+
+    
+					   		
+				  		<div id="centercontainer" ></div>
+					</div>			
+					
+					
+					
+					
+				</div><!--b-right-->
+				
+			</div><!--b-inner_content-->
+			
+			<div class="b-poosh"></div>
+			
+		</div><!--h-page-->
+			
+			
+
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
+
+
+
+ 
+<div class="b-footer">
+	<div class="h-page">
+		<div class="b-index_links">				
+			
+
+
+
+                  
+  <a href="/sitebeloil/ru/center/azs/addUp/contacts/">Контакты</a>  <a href="/sitebeloil/ru/center/azs/addUp/media-center/">Пресс-центр</a>  <a href="/sitebeloil/ru/center/azs/addUp/about/">О сети АЗС</a>
+		<div class="b-slider">
+			<div  class="b-slider__i">
+			<div id="slidercontainer" ></div>
+				<div id="liquid" class="b-slider__body">
+					<i class="sb-sh-l"></i>
+					<i class="sb-sh-r"></i>
+					<span class="previous larr"></span>
+					
+					<div class="wrapper b-slider__body">
+						<ul class="b-slider__body__i">
+							<li class="sb__item"><a style="width:200px;" href="http://www.president.gov.by" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo01.png" /></a><li class="sb__item"><a style="width:200px;" href="http://www.government.by/" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo02.png" /></a><li class="sb__item"><a style="width:200px;" href="http://www.bns.by/" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo03.png" /></a><li class="sb__item"><a style="width:200px;" href="http://export.by/" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo05.png" /></a><li class="sb__item"><a style="width:200px;" href="http://belchemoil.by/" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo06.png" /></a><li class="sb__item"><a style="width:200px;" href="http://www.bnk.by/home/index.php?lang=ru" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo07.png" /></a><li class="sb__item"><a style="width:200px;" href="http://www.investinbelarus.by" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo08.png" /></a><li class="sb__item"><a style="width:200px;" href="http://www.industrialpark.by/" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo09.png" /></a><li class="sb__item"><a style="width:200px;" href="https://vk.com/maeykraine" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo10.jpg" /></a><li class="sb__item"><a style="width:200px;" href="http://gskp.by/" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo11.jpg" /></a><li class="sb__item"><a style="width:200px;" href="http://belarp.by/" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo12.png" /></a><li class="sb__item"><a style="width:200px;" href="http://xn----7sbgfh2alwzdhpc0c.xn--90ais/RatingPortal" target="_blank"><img alt="" src="/sitebeloil/.content/images/banners/logo13.png" /></a>  
+							
+						</ul>
+					</div>
+					<span class="next rarr" style="display: none;"></span>
+				</div><!--b-slider__body-->
+					
+			</div><!--b-slider__i-->
+		</div><!--b-slider-->			
+		
+				<div class="b-copy">
+				
+					&copy; 2013 - 2021 ПО «Белоруснефть»
+				
+					<a class="b-ph" href="http://iba.by/"></a>
+					<div class="b-ph-copy">Разработано в <a href="http://IBA.by/">IBA</a></div><!--b-ph-copy-->
+			
+				</div><!--b-copy-->
+				
+	</div><!--h-page-->		
+</div><!--b-footer-->
+<script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/jquery.min-1.5.js"></script>
+	<script>
+		var $j = jQuery.noConflict();		
+	
+	</script>
+<script src="/sitebeloil/system/modules/by.iba.beloil.templates/resources/js/jquery.liquidcarousel.js"></script > 
+<script>
+	
+		$j(document).ready(function() {
+			$j('#liquid').liquidcarousel({		
+				duration: 100,		
+				hidearrows: true});
+});
+</script>
+	  					          
+			
+</div><!--l-page--></div>
+	
+ 
+
+<!-- Botfaqtor counter -->
+<script>(function(){var randomh=Math.random();var e=document.getElementsByTagName("script")[0];var d=document.createElement("script");d.src="https://scripts.witstroom.com/watch/663" +"?"+ randomh + "";d.type = "text/javascript";d.async = true;d.defer = true;e.parentNode.insertBefore(d, e);})();</script>
+<script id="witstroom_informer" async src="https://scripts.witstroom.com/informer/663"></script>
+<!-- /Botfaqtor counter -->
+
+</body>
+</html>
